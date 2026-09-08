@@ -1,24 +1,3 @@
-// =============================================================================
-// school-frontend/build.js
-// =============================================================================
-// Build-time checks — NO .env required.
-//
-// In CI/CD (GitHub Actions, etc.), .env is NOT in the repo.
-// Environment variables are injected at RUNTIME (by Docker, K8s, etc.).
-// So this build script only checks CODE, not runtime config.
-//
-// What it checks:
-//   ✅ All required source files exist (server.js, index.html, script.js, style.css)
-//   ✅ index.html has the __BACKEND_URL__ placeholder
-//   ✅ All npm dependencies are installed (node_modules)
-//   ✅ package.json has the required scripts
-//
-// What it does NOT check (that's runtime):
-//   ⏭️  .env file — not needed at build time
-//   ⏭️  BACKEND_URL — injected at runtime
-//   ⏭️  Backend reachable — not available in CI/CD
-// =============================================================================
-
 const fs = require("fs");
 const path = require("path");
 
