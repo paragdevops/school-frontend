@@ -1,0 +1,16 @@
+{
+  "name": "school-frontend",
+  "version": "1.0.0",
+  "description": "A beginner-friendly frontend that talks to a backend API over HTTP. Part of a two-project teaching setup.",
+  "main": "server.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "dotenv": "^16.4.7"
+  },
+  "keywords": ["school", "frontend", "beginner", "teaching"],
+  "license": "MIT"
+}

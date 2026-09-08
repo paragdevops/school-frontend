@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.subtitle code {
+  background: #e8f0fe;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1a73e8;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+button {
+  padding: 14px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-student {
+  background-color: #3498db;
+  color: white;
+}
+.btn-student:hover {
+  background-color: #2980b9;
+}
+
+.btn-teacher {
+  background-color: #27ae60;
+  color: white;
+}
+.btn-teacher:hover {
+  background-color: #219a52;
+}
+
+.btn-fee {
+  background-color: #e67e22;
+  color: white;
+}
+.btn-fee:hover {
+  background-color: #d35400;
+}
+
+.btn-cancel {
+  background-color: #95a5a6;
+  color: white;
+}
+.btn-cancel:hover {
+  background-color: #7f8c8d;
+}
+
+.form-card {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.form-card h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.form-field {
+  margin-bottom: 12px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fff;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #3498db;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  min-height: 50px;
+  word-wrap: break-word;
+}
+
+.result-box.success {
+  background-color: #eafaf1;
+  border-color: #27ae60;
+  color: #1e8449;
+}
+
+.result-box.error {
+  background-color: #fdedec;
+  border-color: #e74c3c;
+  color: #c0392b;
+}
+
+.hidden {
+  display: none !important;
+}

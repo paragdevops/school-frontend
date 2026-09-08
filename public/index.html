@@ -1,0 +1,97 @@
+<!DOCTYssssssssssssPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Frontend</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <script>
+    window.BACKEND_URL = "__BACKEND_URL__";
+  </script>
+
+  <div class="container">
+
+    <h1>🏫 School Frontend</h1>
+    <p class="subtitle">
+      This page talks to the <strong>backend API</strong> over HTTP.<br />
+      Backend URL: <code id="backend-url-display"></code>
+    </p>
+
+    <div class="button-group">
+      <button class="btn-student" onclick="showForm('student')">👩‍🎓 Add Student</button>
+      <button class="btn-teacher" onclick="showForm('teacher')">👨‍🏫 Add Teacher</button>
+      <button class="btn-fee" onclick="showForm('fee')">💰 Submit Fee</button>
+    </div>
+
+    <div id="form-student" class="form-card hidden">
+      <h2>👩‍🎓 Add Student</h2>
+      <form onsubmit="submitStudent(event)">
+        <div class="form-field">
+          <label for="student-name">Name</label>
+          <input type="text" id="student-name" placeholder="e.g. Ali Khan" required />
+        </div>
+        <div class="form-field">
+          <label for="student-class">Class</label>
+          <input type="text" id="student-class" placeholder="e.g. 10th" required />
+        </div>
+        <div class="form-field">
+          <label for="student-roll">Roll Number</label>
+          <input type="text" id="student-roll" placeholder="e.g. 101" required />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-student">Submit</button>
+          <button type="button" class="btn-cancel" onclick="hideForms()">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="form-teacher" class="form-card hidden">
+      <h2>👨‍🏫 Add Teacher</h2>
+      <form onsubmit="submitTeacher(event)">
+        <div class="form-field">
+          <label for="teacher-name">Name</label>
+          <input type="text" id="teacher-name" placeholder="e.g. Mrs. Smith" required />
+        </div>
+        <div class="form-field">
+          <label for="teacher-subject">Subject</label>
+          <input type="text" id="teacher-subject" placeholder="e.g. Mathematics" required />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-teacher">Submit</button>
+          <button type="button" class="btn-cancel" onclick="hideForms()">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="form-fee" class="form-card hidden">
+      <h2>💰 Submit Fee</h2>
+      <form onsubmit="submitFee(event)">
+        <div class="form-field">
+          <label for="fee-student">Student</label>
+          <select id="fee-student" required>
+            <option value="">-- Select Student --</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="fee-amount">Amount (₹)</label>
+          <input type="number" id="fee-amount" placeholder="e.g. 5000" min="1" step="0.01" required />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-fee">Submit</button>
+          <button type="button" class="btn-cancel" onclick="hideForms()">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="result" class="result-box hidden">
+      Click a button above to get started!
+    </div>
+
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
